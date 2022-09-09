@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root@cluster0.9fme7hr.mongodb.net/test?retryWrites=true&w=majority
+      database: fueldb
+
+server:
+  port: 8081
+
+  kafka:
+    bootstrap-servers: 9092
+
