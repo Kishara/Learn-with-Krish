@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+<h1>All Order Records</h1>
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Order Id</th>
+        <th scope="col">Gas Station Name</th>
+        <th scope="col">Gas Station Id</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Fuel Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let order of orders ">
+        <td>{{orderModel.orderId}}</td>
+        <td>{{orderModel.gasStationName}}</td>
+        <td>{{orderModel.gasStationId}}</td>
+        <td>{{orderModel.amount}}</td>
+        <td>{{orderModel.fuelType}}</td>
+        <td>{{orderModel.status}}</td>
+        <td>{{orderModel.date}}</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+  </div>
+</div>

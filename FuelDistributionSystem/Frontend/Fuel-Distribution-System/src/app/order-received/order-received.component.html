@@ -1,0 +1,46 @@
+<div class="container w-25">
+  <div class="row">
+    <div class="col-md registration">
+      <h2>Submit Order Received Status</h2>
+      <br>
+        <div class="form-group mt-sm-2">
+          <label >Gas Station ID</label>
+          <input type="text" class="form-control" placeholder="Gas Station ID" [(ngModel)] = "id">
+        </div>
+        <button type="button" class="btn btn-primary mt-sm-2" (click)="getOrderById()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md">
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Order Id</th>
+          <th scope="col">Gas Station Name</th>
+          <th scope="col">Gas Station Id</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Fuel Type</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let order of orders">
+          <td>{{order.orderId}}</td>
+          <td>{{order.gasStationName}}</td>
+          <td>{{order.gasStationId}}</td>
+          <td>{{order.amount}}</td>
+          <td>{{order.fuelType}}</td>
+          <td>{{order.status}}</td>
+          <td>{{order.date}}</td>
+          <td *ngIf="order.status == 'Dispatched'"><button type="button" class="btn btn-primary mt-sm-1 mb-sm-1" (click)="getOrderComplete(order.orderId)">Completed</button></td>
+        </tr>
+      </tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+  

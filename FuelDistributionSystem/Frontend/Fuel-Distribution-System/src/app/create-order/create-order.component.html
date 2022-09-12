@@ -1,0 +1,38 @@
+<div class="container w-25">
+    <div class="row">
+      <div class="col-md registration">
+        <h2>Order</h2>
+        <form (ngSubmit)="createOrder()">
+          <div class="form-group">
+            <label >Gas Station Name</label>
+            <input type="text" class="form-control" placeholder="Gas Station Name" id="gasStationName" name="gasStationName" [(ngModel)]="orderModel.gasStationName" >
+          </div>
+          <div class="form-group mt-sm-2">
+            <label >Gas Station Id</label>
+            <input type="text" class="form-control" placeholder="Gas Station Id" id="gasStationId" name="gasStationId" [(ngModel)]="orderModel.gasStationId">
+          </div>
+          <div class="form-group mt-sm-2">
+            <label >Amount</label>
+            <select class="form-select" id="amount" name="amount" [(ngModel)]="orderModel.amount">
+              <option value="3300">3300</option>
+              <option value="6600">6600</option>
+              <option value="13200">13200</option>
+            </select>
+          </div>
+          <div class="form-group mt-sm-2" >
+            <label >Fuel Type</label>
+            <select class="form-select" id="fuelType" name="fuelType" [(ngModel)]="orderModel.fuelType">
+                <option value="Diesel">Diesel</option>
+                <option value="Super Diesel">Super Diesel</option>
+                <option value="92 Octane">92 Octane</option>
+                <option value="95 Octane">95 Octane</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-sm-2" (click)="realodPage()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+
